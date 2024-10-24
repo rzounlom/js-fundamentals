@@ -17,61 +17,61 @@ Here are the main comparison operators:
 // The equal operator checks if two values are equal, performing type coercion (automatic type conversion).
 
 // Example 1: Comparing numbers
-console.log(5 == 5); // Output: true
+//console.log(5 == 5); // Output: true
 
 // Example 2: Comparing number and string (type coercion happens)
-console.log(5 == "5"); // Output: true (because of type coercion)
+//console.log(5 == "5"); // Output: true (because of type coercion)
 
 // Example 3: Comparing different values
-console.log(10 == 20); // Output: false
+//console.log(10 == 20); // Output: false
 
 // 2. Strict Equal (===)
 // The strict equal operator checks if two values are equal AND of the same type (no type coercion).
 
 // Example 1: Comparing numbers
-console.log(5 === 5); // Output: true
+//console.log(5 === 5); // Output: true
 
 // Example 2: Comparing number and string (no type coercion)
-console.log(5 === "5"); // Output: false (different types)
+//console.log(5 === "5"); // Output: false (different types)
 
 // Example 3: Comparing boolean values
-console.log(true === true); // Output: true
+//console.log(true === true); // Output: true
 
 // 3. Not Equal (!=)
 // The not equal operator checks if two values are not equal, performing type coercion.
 
 // Example 1: Comparing different numbers
-console.log(10 != 5); // Output: true
+//console.log(10 != 5); // Output: true
 
 // Example 2: Comparing number and string (type coercion happens)
-console.log(5 != "5"); // Output: false (due to type coercion)
+//console.log(5 != "5"); // Output: false (due to type coercion)
 
 // Example 3: Comparing strings
-console.log("hello" != "world"); // Output: true
+//console.log("hello" != "world"); // Output: true
 
 // 4. Strict Not Equal (!==)
 // The strict not equal operator checks if two values are not equal OR not of the same type (no type coercion).
 
 // Example 1: Comparing different numbers
-console.log(10 !== 5); // Output: true
+//console.log(10 !== 5); // Output: true
 
 // Example 2: Comparing number and string (no type coercion)
-console.log(5 !== "5"); // Output: true (different types)
+//console.log(5 !== "5"); // Output: true (different types)
 
 // Example 3: Comparing boolean values
-console.log(true !== false); // Output: true
+//console.log(true !== false); // Output: true
 
 // 5. Greater Than (>)
 // The greater than operator checks if the left-hand value is greater than the right-hand value.
 
 // Example 1: Comparing numbers
-console.log(10 > 5); // Output: true
+//console.log(10 > 5); // Output: true
 
 // Example 2: Comparing strings (based on lexicographical order)
-console.log("banana" > "apple"); // Output: true (because 'b' comes after 'a')
+//console.log("banana" > "apple"); // Output: true (because 'b' comes after 'a')
 
 // Example 3: Comparing numbers and strings (type coercion happens)
-console.log(10 > "5"); // Output: true (type coercion)
+//console.log(10 > "5"); // Output: true (type coercion)
 
 /* 
 6. Greater Than or Equal (>=)
@@ -79,37 +79,37 @@ The greater than or equal operator checks if the left-hand value is greater than
 */
 
 // Example 1: Comparing numbers
-console.log(10 >= 10); // Output: true
+//console.log(10 >= 10); // Output: true
 
 // Example 2: Comparing different numbers
-console.log(15 >= 20); // Output: false
+//console.log(15 >= 20); // Output: false
 
 // Example 3: Comparing number and string (type coercion happens)
-console.log(7 >= "5"); // Output: true
+//console.log(7 >= "5"); // Output: true
 
 // 7. Less Than (<)
 // The less than operator checks if the left-hand value is less than the right-hand value.
 
 // Example 1: Comparing numbers
-console.log(5 < 10); // Output: true
+//console.log(5 < 10); // Output: true
 
 // Example 2: Comparing strings (based on lexicographical order)
-console.log("apple" < "banana"); // Output: true (because 'a' comes before 'b')
+//console.log("apple" < "banana"); // Output: true (because 'a' comes before 'b')
 
 // Example 3: Comparing numbers and strings (type coercion happens)
-console.log(5 < "10"); // Output: true
+//console.log(5 < "10"); // Output: true
 
 // 8. Less Than or Equal (<=)
 // The less than or equal operator checks if the left-hand value is less than or equal to the right-hand value.
 
 // Example 1: Comparing numbers
-console.log(5 <= 5); // Output: true
+//console.log(5 <= 5); // Output: true
 
 // Example 2: Comparing different numbers
-console.log(5 <= 3); // Output: false
+//console.log(5 <= 3); // Output: false
 
 // Example 3: Comparing number and string (type coercion happens)
-console.log(5 <= "10"); // Output: true
+//console.log(5 <= "10"); // Output: true
 
 /*
 Summary of Comparison Operators:

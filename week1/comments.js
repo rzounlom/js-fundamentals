@@ -38,7 +38,7 @@ function addNumbers(num1, num2) {
   return num1 + num2;
 }
 
-console.log(addNumbers(5, 3)); // Output: 8
+//console.log(addNumbers(5, 3)); // Output: 8
 
 // 5. Inline Comments for Clarity
 function calculateArea(radius) {
@@ -47,7 +47,7 @@ function calculateArea(radius) {
   return pi * radius * radius;
 }
 
-console.log(calculateArea(5)); // Output: 78.53975
+//console.log(calculateArea(5)); // Output: 78.53975
 
 // 6. String Concatenation with Comments
 // Here, we're using the + operator to concatenate strings
@@ -55,7 +55,7 @@ let firstName = "John";
 let lastName = "Doe";
 // Concatenating the first name and last name
 let fullName = firstName + " " + lastName;
-console.log("Full Name: " + fullName); // Output: Full Name: John Doe
+//console.log("Full Name: " + fullName); // Output: Full Name: John Doe
 
 // 7. Template Strings (Template Literals) with Comments
 // Template strings allow for easier string interpolation using backticks (`) and ${} for variables
@@ -63,7 +63,7 @@ let city = "New York";
 let country = "USA";
 // Using template strings for a cleaner syntax
 let location = `City: ${city}, Country: ${country}`;
-console.log(location); // Output: City: New York, Country: USA
+//console.log(location); // Output: City: New York, Country: USA
 
 // 8. Complex Condition with Comments
 function isEligibleToVote(age) {
@@ -75,8 +75,8 @@ function isEligibleToVote(age) {
   }
 }
 
-console.log(isEligibleToVote(20)); // Output: You are eligible to vote.
-console.log(isEligibleToVote(16)); // Output: You are not eligible to vote.
+//console.log(isEligibleToVote(20)); // Output: You are eligible to vote.
+//console.log(isEligibleToVote(16)); // Output: You are not eligible to vote.
 
 /* 
   9. Describing Loop Logic with Comments
@@ -84,7 +84,7 @@ console.log(isEligibleToVote(16)); // Output: You are not eligible to vote.
   Loops are essential for repeating actions in JavaScript.
 */
 for (let i = 1; i <= 5; i++) {
-  console.log(i); // Logs the current value of i
+  //console.log(i); // Logs the current value of i
 }
 
 // 10. Describing Higher-order Functions
@@ -98,4 +98,4 @@ function applyFunction(fn, x, y) {
 }
 
 // Passing the addNumbers function as a callback to applyFunction
-console.log(applyFunction(addNumbers, 5, 7)); // Output: 12
+//console.log(applyFunction(addNumbers, 5, 7)); // Output: 12
