@@ -123,3 +123,16 @@ switch (candyType) {
   default:
   //console.log("Hmmm... not sure what candy type you selected");
 }
+
+// Same example using else if instead
+const candyType2 = "test";
+
+if (candyType2 === "m&ms") {
+  onsole.log("You selected: m&ms");
+} else if (candyType2 === "snickers") {
+  console.log("You selected: snickers");
+} else if (candyType2 === "skittles") {
+  console.log("You selected: skittles");
+} else {
+  console.log("Hmmm... not sure what candy type you selected");
+}
