@@ -1,4 +1,4 @@
-// Javascript basics
+// Javascript Comments
 // asdfasdflkj
 //Code comments: you can create code comments using two forward slashes, or //. This allows us to create comments that are ignored when our code executes. You can also you /* */ for multi-line comments
 
