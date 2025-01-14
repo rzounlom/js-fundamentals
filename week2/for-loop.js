@@ -89,7 +89,7 @@ for (let i = 0; i <= 10; i++) {
 // Explanation:
 // - The `continue` statement skips to the next iteration if i is 0 since we don't want to compute it.
 
-//Exammple looping over a string
+//Exammple looping over a string and getting access to each character
 let str = "hello world";
 for (let i = 0; i < str.length; i++) {
   //console.log(str[i]);
