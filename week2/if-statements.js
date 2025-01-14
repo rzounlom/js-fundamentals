@@ -125,13 +125,12 @@ switch (candyType) {
 }
 
 // Same example using else if instead
-const candyType2 = "test";
 
-if (candyType2 === "m&ms") {
+if (candyType === "m&ms") {
   // onsole.log("You selected: m&ms");
-} else if (candyType2 === "snickers") {
+} else if (candyType === "snickers") {
   // console.log("You selected: snickers");
-} else if (candyType2 === "skittles") {
+} else if (candyType === "skittles") {
   // console.log("You selected: skittles");
 } else {
   // console.log("Hmmm... not sure what candy type you selected");
