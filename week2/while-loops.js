@@ -17,7 +17,7 @@ Syntax:
 let count = 1;
 
 while (count <= 5) {
-  //console.log(count); // Output: 1, 2, 3, 4, 5
+  // console.log(count); // Output: 1, 2, 3, 4, 5
   count++; // Increment count by 1
 }
 // Explanation:
@@ -42,8 +42,8 @@ let i = 1;
 
 while (true) {
   // Infinite loop
-  //console.log(i); // Output: 1, 2, 3, 4, 5
-  if (i === 5) break; // Exit loop when i reaches 5
+  console.log(i); // Output: 1, 2, 3, 4, 5, etc.
+  if (i >= 100) break; // Exit loop when i reaches 5
   i++;
 }
 // Explanation:
@@ -54,13 +54,13 @@ while (true) {
 //console.log("Example 4: Skipping iteration with continue");
 let num = 0;
 
-while (num < 5) {
+while (num < 25) {
   num++;
-  if (num === 3) {
-    //console.log("Skipping 3");
+  if (num === 15) {
+    console.log("Skipping 15");
     continue; // Skip the rest of this iteration
   }
-  //console.log(num); // Output: 1, 2, 4, 5 (3 is skipped)
+  console.log(num); // Output: 1, 2, 4, 5 (15 is skipped)
 }
 // Explanation:
 // - The `continue` statement skips the rest of the code when `num` is 3.

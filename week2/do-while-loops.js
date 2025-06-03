@@ -43,11 +43,11 @@ let i = 0;
 do {
   i++;
   if (i === 3) {
-    //console.log("Skipping 3");
+    // console.log("Skipping 3");
     continue; // Skip the rest of the code when i is 3
   }
-  //console.log(i); // Output: 1, 2, 4, 5 (3 is skipped)
-} while (i < 5);
+  // console.log(i); // Output: 1, 2, 4, 5, etc. (3 is skipped)
+} while (i < 10);
 // Explanation:
 // - When `i` is 3, the `continue` statement skips `//console.log(i)` for that iteration.
 
@@ -56,11 +56,11 @@ do {
 let n = 1;
 
 do {
-  //console.log(n); // Output: 1, 2, 3
-  if (n === 3) {
-    break; // Exit the loop when n reaches 3
+  console.log(n); // Output: 1, 2, 3
+  if (n === 13) {
+    break; // Exit the loop when n reaches 25
   }
   n++;
-} while (n <= 5);
+} while (n <= 25);
 // Explanation:
-// - The loop stops early when `n` is 3 due to the `break` statement, even though the condition is `n <= 5`.
+// - The loop stops early when `n` is 13 due to the `break` statement, even though the condition is `n <= 25`.

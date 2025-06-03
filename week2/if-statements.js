@@ -4,7 +4,7 @@
 The `if` statement is used to execute a block of code only if a specified condition is true.
 Syntax:
     if (condition) {
-        // code to run if condition is true
+        code to run if condition is true
     }
 If the condition is false, the code inside the `if` block is skipped.
 */
@@ -14,7 +14,7 @@ If the condition is false, the code inside the `if` block is skipped.
 let number = 10;
 
 if (number > 0) {
-  //   console.log("The number is positive."); // Output: The number is positive.
+  // console.log("The number is positive."); // Output: The number is positive.
 }
 // Explanation: The condition `number > 0` is true, so the code inside the `if` block runs.
 

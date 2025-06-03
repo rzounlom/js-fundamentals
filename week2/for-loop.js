@@ -3,7 +3,7 @@
 A `for` loop is used to repeat a block of code a specific number of times.
 Syntax:
     for (initialization; condition; increment/decrement) {
-        // code to execute in each loop iteration
+        code to execute in each loop iteration
     }
 
 1. Initialization: Sets the starting point (e.g., let i = 0).
@@ -14,7 +14,7 @@ Syntax:
 // Example 1: Basic for loop (Counting from 1 to 5)
 //console.log("Example 1: Counting from 1 to 5");
 for (let i = 1; i <= 5; i++) {
-  //console.log(i); // Output: 1, 2, 3, 4, 5
+  // console.log(i); // Output: 1, 2, 3, 4, 5
 }
 // Explanation:
 // - `i` starts at 1. The loop runs as long as `i <= 5`.
@@ -25,13 +25,13 @@ for (let i = 1; i <= 5; i++) {
 let idx = 1; //initialization(declare i as index)
 for (; idx <= 5; idx++) {
   //condition(how many times to loop); update(what to increase index by after each iteration)
-  //console.log("Iteration " + idx);
+  // console.log("Iteration " + idx);
 }
 
 // Example 2: Counting down (from 5 to 1)
 //console.log("Example 2: Counting down from 5 to 1");
 for (let i = 5; i > 0; i--) {
-  //console.log(i); // Output: 5, 4, 3, 2, 1
+  // console.log(i); // Output: 5, 4, 3, 2, 1
 }
 // Explanation:
 // - `i` starts at 5. The loop runs as long as `i > 0`.
@@ -40,7 +40,7 @@ for (let i = 5; i > 0; i--) {
 // Example 3: Skipping values with increment of 2
 //console.log("Example 3: Skipping values with increment of 2");
 for (let i = 0; i <= 10; i += 2) {
-  //console.log(i); // Output: 0, 2, 4, 6, 8, 10
+  // console.log(i); // Output: 0, 2, 4, 6, 8, 10
 }
 // Explanation:
 // - `i` starts at 0 and increments by 2 each time (i += 2).
@@ -50,22 +50,22 @@ for (let i = 0; i <= 10; i += 2) {
 //console.log("Example 4: Breaking out of a loop early");
 for (let i = 1; i <= 10; i++) {
   if (i === 5) {
-    //console.log("Loop stopped at 5");
-    break; // Stops the loop when `i` is 5
+    // console.log("Break out of loop at 5");
+    break; // Stops the loop when `i` is 5 you can also use the 'return' keyword to break out of loop
   }
-  //console.log(i); // Output: 1, 2, 3, 4
+  // console.log(i); // Output: 1, 2, 3, 4
 }
 // Explanation:
 // - The `break` statement exits the loop when `i` reaches 5, stopping further iterations.
 
 // Example 5: Skipping an iteration with continue
 //console.log("Example 5: Skipping an iteration with continue");
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 10; i++) {
   if (i === 3) {
-    //console.log("Skipping 3");
+    // console.log("Skipping 3");
     continue; // Skips the rest of the code in the loop for `i = 3`
   }
-  //console.log(i); // Output: 1, 2, 4, 5
+  // console.log(i); // Output: 1, 2, 4, 5
 }
 // Explanation:
 // - The `continue` statement skips the current iteration when `i` is 3.
@@ -76,13 +76,14 @@ for (let i = 1; i <= 5; i++) {
 for (let i = 0; i <= 10; i++) {
   if (i === 0) {
     // continue; //continue skips the current iteration if hte condition is met
+    // console.log("Skipping 0!");
     continue;
   }
 
   if (i % 2 === 0) {
     //modulus
-    // //console.log(i)
-    //console.log("even number: ", i);
+    //console.log(i)
+    // console.log("even number: ", i);
   }
 }
 
@@ -92,14 +93,16 @@ for (let i = 0; i <= 10; i++) {
 //Exammple looping over a string and getting access to each character
 let str = "hello world";
 for (let i = 0; i < str.length; i++) {
-  //console.log(str[i]);
+  //we can also loop over other JS datastructures like Strings
+  // console.log(str[i]); // prints each character of the string "hello world"
 }
 
 //example string problem
 //write a for loop that reverses a string
 let reversedStr = "";
 for (let i = 0; i < str.length; i++) {
-  reversedStr = str[i] + reversedStr;
+  // loop through each character in the string
+  reversedStr = str[i] + reversedStr; // prepend the current character to the reversed string
 }
 
 // console.log(reversedStr); //dlrow olleh
@@ -123,11 +126,11 @@ const myStr = "Print me to the console";
 
 for (let char of myStr) {
   //the variable char represents each value in the string during each iteraiton; NOTE: we do not have access to the index using this loop
-  //console.log("Char using for...of loop", char);
+  // console.log("Char using for...of loop", char);
 }
 
 //same example using a for loop
 for (let i = 0; i < myStr.length; i++) {
   //traditional for loop
-  //console.log("char using basic for loop", myStr[i]); //we access the value of an iterable using bracket notation; NOTE: we will be covering how to access iterables next week.
+  // console.log("char using basic for loop", myStr[i]); //we access the value of an iterable using bracket notation; NOTE: we will be covering how to access iterables next week.
 }
