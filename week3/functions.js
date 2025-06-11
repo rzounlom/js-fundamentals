@@ -1,5 +1,10 @@
 /** Functions Basics */
-
+// Functions are reusable blocks of code that can be executed when called. They can take inputs (parameters) and return outputs (values).
+// Functions help us organize our code, avoid repetition, and make it easier to read and maintain.
+// Functions can be declared in several ways, including function declarations, function expressions, and arrow functions.
+// Functions can take parameters, which are values passed into the function when it is called. They can also return values using the `return` keyword.
+// Functions can be invoked (called) by using their name followed by parentheses. If the function takes parameters, you can pass values inside the parentheses.
+// Functions can also be used as arguments to other functions, known as callback functions, allowing for more flexible and dynamic code execution.
 //*** Declaring Functions ***
 
 //using the function keyword
@@ -7,7 +12,7 @@ function myFunc() {
   //the name of the function is myFunc in this example
   // Function body
   // Code to be executed
-  //console.log("hello"); //this function logs the string hello to the console
+  // console.log("hello"); //this function logs the string hello to the console
 }
 
 myFunc(); //hello: invoking the function
@@ -15,7 +20,7 @@ myFunc(); //hello: invoking the function
 //storing the function declaration as a variable
 const printHello = function () {
   //this is known as an anonymous function because it has no name. We are using the variable name to invoke the function so there is no need to give it a name, although we can if we want.
-  //console.log("hello from printHello");
+  // console.log("hello from printHello");
 };
 
 printHello(); // hello
@@ -100,56 +105,9 @@ const printEvenNums = function (limit) {
   for (let i = 1; i <= limit; i++) {
     if (i % 2 === 0) {
       //checks if the value i is even
-      //console.log(i); //logs i to the console
+      // console.log(i); //logs i to the console
     }
   }
 };
 
 printEvenNums(50);
-
-/*** Callback Functions ***/
-//A callback function is a function that is passed as an argument to another function. The callback function is executed inside the function it was passed to.
-
-//example 1. basic callback implementation
-function process(data, callback) {
-  // ... do something with the data
-  callback(data); // Execute the callback function
-}
-
-//example 2. creating a function that accepts 2 numbers and a callback function as parameters and returns result of invoking the callback function using the 2 numbers as parameters.
-
-//declare the callback functions/math operations
-
-//create a function that accepts two numbers/returns the sum
-function addTwoNums(num1, num2) {
-  return num1 + num2;
-}
-
-//create a function that accepts two numbers/returns the first number minus the second number
-function subtractTwoNums(num1, num2) {
-  return num1 - num2;
-}
-
-//create a function that accepts two numbers/returns the first number divided by the second number
-function divideTwoNums(num1, num2) {
-  return num1 / num2;
-}
-
-//create a function that accepts two numbers/returns the first number multiplied by the second number
-function multiplyTwoNums(num1, num2) {
-  return num1 * num2;
-}
-
-//create a function that accepts two numbers and a callback function as parameters and returns the result of invoking the callback function using the two numbers as parameters
-function myMathFunction(a, b, mathOperation) {
-  //mathOperation is a callback function
-  console.log({ a, b, mathOperation });
-
-  const result = mathOperation(a, b);
-  return result;
-}
-
-// console.log(myMathFunction(12, 6, addTwoNums));
-// console.log(myMathFunction(12, 6, subtractTwoNums));
-// console.log(myMathFunction(12, 6, divideTwoNums));
-// console.log(myMathFunction(12, 6, multiplyTwoNums));

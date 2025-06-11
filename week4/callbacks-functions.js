@@ -57,6 +57,54 @@ function multiply(x, y) {
 // calculate(5, 3, multiply); // Output: The result is 15
 
 // =============================================
+// More examples of callback functions
+// =============================================
+
+//example 1. basic callback implementation
+function process(data, callback) {
+  // ... do something with the data
+  callback(data); // Execute the callback function
+}
+
+//example 2. creating a function that accepts 2 numbers and a callback function as parameters and returns result of invoking the callback function using the 2 numbers as parameters.
+
+//declare the callback functions/math operations
+
+//create a function that accepts two numbers/returns the sum
+function addTwoNums(num1, num2) {
+  return num1 + num2;
+}
+
+//create a function that accepts two numbers/returns the first number minus the second number
+function subtractTwoNums(num1, num2) {
+  return num1 - num2;
+}
+
+//create a function that accepts two numbers/returns the first number divided by the second number
+function divideTwoNums(num1, num2) {
+  return num1 / num2;
+}
+
+//create a function that accepts two numbers/returns the first number multiplied by the second number
+function multiplyTwoNums(num1, num2) {
+  return num1 * num2;
+}
+
+//create a function that accepts two numbers and a callback function as parameters and returns the result of invoking the callback function using the two numbers as parameters
+function myMathFunction(a, b, mathOperation) {
+  //mathOperation is a callback function
+  console.log({ a, b, mathOperation });
+
+  const result = mathOperation(a, b);
+  return result;
+}
+
+// console.log(myMathFunction(12, 6, addTwoNums));
+// console.log(myMathFunction(12, 6, subtractTwoNums));
+// console.log(myMathFunction(12, 6, divideTwoNums));
+// console.log(myMathFunction(12, 6, multiplyTwoNums));
+
+// =============================================
 // KEY POINTS ABOUT CALLBACK FUNCTIONS
 // =============================================
 

@@ -51,7 +51,7 @@ const matrix = [
 //Indexing - using the index (starting with 0) to access array elements
 const myFruits = ["apple", "banana", "orange"];
 
-//console.log(myFruits[0]); // Output: "apple"
+// console.log(myFruits[0]); // Output: "apple"
 //console.log(myFruits[1]); // Output: "banana"
 //console.log(myFruits[2]); // Output: "orange"
 //console.log(myFruits[20]); // Output: "undefined" --> no value exists at index 20
@@ -98,7 +98,7 @@ myFruits.unshift("apple", "cherry", "watermelon");
 //console.log(myFruits);
 
 //Array.length
-// //console.log(myFruits.length)
+//console.log(myFruits.length)
 
 //includes: checks a an element exists within an array; returns true/false
 //console.log(myFruits.includes("apple")); //true
