@@ -7,18 +7,13 @@ const myObj2 = new Object({
   name: "Frank",
 });
 
-//template literals
+//set up data
 const myName = "Romaric";
 const myOccupation = "Software Engineer";
-
-// console.log('Hi My Name is ' + myName + 'I am a ' + myOccupation)
-// console.log(`Hi My Name is ${myName} I am a ${myOccupation}`)
 
 /** OOP Basics */
 
 /** Declaring an Object using a function*/
-let myStr = "";
-let myNewStr = new String("");
 
 function Person(name, age) {
   //we declare a function called Person which takes in a name, and age as parameters.
@@ -31,21 +26,34 @@ function Person(name, age) {
     3. a function called sayHello that will print a greeting using the name assigned to the object
   
     NOTE: This is similar to the way we declare objects
-    */
+
+  */
+
   this.name = name;
   this.age = age;
   this.sayHello = function () {
     console.log(`Hello, my name is ${this.name}.`);
   };
+
+  /*
+  NOTE: 
+  The Keyword 'this' refers to the current instance of the object being created.
+  In this case, it refers to the object created by the Person function.
+   */
 }
 
 //Proof that functions are actually objects
-// console.log('type of person: ', typeof Person)
-// console.log('The prototype of a function is: ', Person.prototype) // All functions have the prototype of the Object data type.
+// console.log("type of person: ", typeof Person);
+// console.log("The prototype of a function is: ", Person.prototype); // All functions have the prototype of the Object data type.
+
+//The prototype is an object that is used to define properties and methods that can be shared across all instances of the function.
+//We can create an instance of the Person function using the 'new' keyword
+//This creates a new object with the properties and methods defined in the Person function
+//We can then access the properties and methods of the object using the dot notation
 
 const person1 = new Person("Alice", 25);
 // console.log(person1);
-// person1.sayHello(); // Output: "Hello, my name is Alice."
+// person1.sayHello(); // invoke sayHello function; Output: "Hello, my name is Alice."
 // console.log("person1 name: ", person1.name);
 
 const James = new Person("James", 22);
@@ -58,23 +66,30 @@ const James = new Person("James", 22);
 
 class Person2 {
   constructor(name, age) {
-    //this constructor function is identical to the function above. We assign the name and age parameters passed when creating a new instance of the Person2 Object as fields of the object using the 'this' keyword
+    /*
+    this constructor function is identical to the function above.
+    We assign the name and age parameters passed when creating a new instance of the Person2 Object as fields of the object 
+    using the 'this' keyword
+    */
     this.name = name;
     this.age = age;
   }
 
-  //we can ommit the use of var, let or const when declaring variables within a class.
+  //we can ommit the use of var, let or const when declaring class fields within a class.
+  //We are not creating a variable, we are creating a class field that will be available to all instances of the class.
 
-  //NOTE: we must declare these varables outside of the construcore function
+  //NOTE: we must declare these class fields outside of the construcore function
   sayHello = function () {
     //Notice how we did not need to use var/let/const to declare this function on the class
     console.log(`Hello, my name is ${this.name}.`);
   };
+  test = "test"; // This is a class field, not a variable declaration
 }
 
 const person2 = new Person2("Laura", 25);
 // console.log(person2);
 // person2.sayHello(); // Output: "Hello, my name is Alice."
+// console.log(person2.test); // Output: "Hello, my name is Alice."
 
 /** Constructor functions */
 
@@ -84,6 +99,8 @@ const person2 = new Person2("Laura", 25);
   They serve as templates for creating similar objects with shared properties and methods.
   */
 
+/** The Dog function, or constructor function, can be used to create instances of the Dog class */
+// This is a constructor function that creates a Dog object with properties and methods
 function Dog(name, breed, owner) {
   this.name = name;
   this.breed = breed;
@@ -105,6 +122,9 @@ const Simba = new Dog("Simba", "Pitbull", "Lisa Smith");
 // console.log(Simba);
 // Simba.greet();
 
+/** The Dog2 Class can be used to create instances of the Dog2 class using class syntax */
+// This is a class that creates a Dog object with properties and methods
+// It is similar to the Dog function above, but uses class syntax instead of function syntax
 class Dog2 {
   constructor(name, breed, owner) {
     this.name = name;
@@ -136,11 +156,13 @@ function Student(name, age, grade) {
 }
 
 Student.prototype = Object.create(Person.prototype); // Inheritance: the student class inherits the Person properties
-Student.prototype.constructor = Student;
+Student.prototype.constructor = Student; // Set the constructor back to Student
 
 const student1 = new Student("Bob", 18, "A");
 // student1.sayHello(); // Output: "Hello, my name is Bob."
 // console.log(student1);
+// console.log(student1 instanceof Person); // true proof that student1 is an instance of Person
+// console.log(student1 instanceof Student); // true proof that student1 is an instance of Student
 
 /** Prototypes and Inheritance using class syntax*/
 class Student2 extends Person {
@@ -156,7 +178,7 @@ class Student2 extends Person {
 
 const student2 = new Student2("Alice", 23, 10);
 // console.log(student2);
-// student2.sayHello(); // Output: "Hello, my name is Alice."
+// student2.sayHello(); // Output: "Hello, my name is Alice." This works because Student2 inherits from Person
 // student2.introduce(); // Output: "I am a student in grade 10."
 
 // console.log(student2 instanceof Person)
