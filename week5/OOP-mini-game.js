@@ -2,6 +2,7 @@
 class Character {
   // Constructor for initializing character properties
   constructor(name, health, baseDamage) {
+    // Initialize character properties
     this.name = name;
     this.health = health;
     this.baseDamage = baseDamage;
@@ -11,28 +12,28 @@ class Character {
 
   // Method for attacking a target character
   attack(target) {
-    const totalDamage = this.baseDamage + Math.floor(Math.random() * 5);
+    const totalDamage = this.baseDamage + Math.floor(Math.random() * 5); // Randomly add 0-4 damage to base damage
     console.log(
-      `${this.name} attacks ${target.name} for ${totalDamage} damage!`
+      `${this.name} attacks ${target.name} for ${totalDamage} damage!` // Log the attack details
     );
-    target.takeDamage(totalDamage);
+    target.takeDamage(totalDamage); // Call the takeDamage method on the target character
   }
 
   // Method for taking damage from an attack
   takeDamage(damage) {
-    this.health -= damage;
-    console.log(`${this.name} takes ${damage} damage.`);
+    this.health -= damage; // Reduce health by the damage taken
+    console.log(`${this.name} takes ${damage} damage.`); // Log the damage taken
     if (this.health <= 0) {
-      console.log(`${this.name} has been defeated.`);
+      console.log(`${this.name} has been defeated.`); // Log if the character is defeated
     }
   }
 
   // Method for gaining experience points
   gainExp(exp) {
-    this.exp += exp;
-    console.log(`${this.name} gains ${exp} experience points.`);
+    this.exp += exp; // Add experience points
+    console.log(`${this.name} gains ${exp} experience points.`); // Log the experience gained
     if (this.exp >= 100) {
-      this.levelUp();
+      this.levelUp(); // Check if the character can level up
     }
   }
 
@@ -58,8 +59,8 @@ class Wizard extends Character {
   castSpell(target) {
     if (this.mana >= 20) {
       console.log(`${this.name} casts a powerful spell on ${target.name}!`);
-      this.mana -= 20;
-      target.takeDamage(this.baseDamage * 2);
+      this.mana -= 20; // Reduce mana by the cost of the spell
+      target.takeDamage(this.baseDamage * 2); // Deal double damage to the target
     } else {
       console.log(`${this.name} doesn't have enough mana to cast a spell.`);
     }
@@ -76,13 +77,13 @@ class Warrior extends Character {
   // Method for using a weapon to attack a target
   useWeapon(target) {
     console.log(`${this.name} attacks ${target.name} with a mighty swing!`);
-    target.takeDamage(this.baseDamage + 10);
+    target.takeDamage(this.baseDamage + 10); // Deal extra damage with the weapon
   }
 }
 
 // Create instances of characters
-const mage = new Wizard("Gandalf");
-const warrior = new Warrior("Aragorn");
+const mage = new Wizard("Gandalf"); // Create a new Wizard instance
+const warrior = new Warrior("Aragorn"); // Create a new Warrior instance
 
 // console.log(mage);
 // console.log(warrior);
